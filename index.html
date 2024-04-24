@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music web</title>
+    <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h3 class="logo"><em>unreal pupu <span>Sounds</span></em></h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">specifications</a></li>
+                <li><a href="#">products</a></li>
+                <li><a href="#">connect</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1>the <br> real <br> sound</h1>
+            </div>
+            <div class="right">
+                <p>click here to listen</p>
+                <i class="fa-solid fa-play" id="icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="Kehlani_Ft_Ty_Dolla_Sign_-_Nights_Like_This.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (mySong.paused){
+                mySong.play();
+                icon.src = "211871_pause_icon.png";
+            } else{
+                mySong.pause();
+                icon.src = "fa-solid fa-play"
+            }
+        }
+    </script>
+</body>
+</html>
